@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SereneMind | Yoga & Meditation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true">✦</span>
+      <span><strong>SereneMind</strong><small>YOUR PERSONAL WELLNESS GUIDE</small></span>
+    </a>
+    <a class="top-link" href="#how-it-works">How it works <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse-dot"></span> A LITTLE SPACE FOR YOU</div>
+        <h1>Find your calm.<br><em>One breath at a time.</em></h1>
+        <p class="hero-intro">Personalized yoga, meditation, and breathing sessions — written for your moment and brought to life with AI voice.</p>
+        <div class="hero-tags"><span>✧ Mindful moments</span><span>◌ Your pace</span><span>♫ Guided audio</span></div>
+      </div>
+      <div class="hero-art" aria-label="Decorative sunrise and peaceful landscape">
+        <div class="sun"></div><div class="hill hill-back"></div><div class="hill hill-front"></div>
+        <div class="art-caption">PAUSE. BREATHE. BEGIN AGAIN.</div>
+      </div>
+    </section>
+
+    <section class="workspace" id="create">
+      <div class="section-heading">
+        <div><p class="eyebrow">YOUR MOMENT, YOUR WAY</p><h2>Create a session</h2></div>
+        <span class="step-label">01 <i>—</i> 02</span>
+      </div>
+
+      <div class="session-types" role="group" aria-label="Session type">
+        <button class="type-card selected" data-type="Meditation" type="button">
+          <span class="type-icon">☼</span><strong>Meditation</strong><small>Quiet the noise</small>
+        </button>
+        <button class="type-card" data-type="Yoga" type="button">
+          <span class="type-icon">♧</span><strong>Gentle yoga</strong><small>Move with care</small>
+        </button>
+        <button class="type-card" data-type="Breathing" type="button">
+          <span class="type-icon">〰</span><strong>Breathing</strong><small>Return to now</small>
+        </button>
+      </div>
+
+      <form id="sessionForm" class="form-card">
+        <div class="form-grid">
+          <label class="field field-wide">
+            <span>What would you like to focus on?</span>
+            <input id="focus" maxlength="120" value="relaxation" placeholder="e.g. stress relief, better focus, a gentle morning" required>
+            <small>Choose an intention, not a medical treatment.</small>
+          </label>
+          <label class="field">
+            <span>Session length</span>
+            <select id="duration">
+              <option>3 minutes</option><option selected>5 minutes</option><option>10 minutes</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Experience</span>
+            <select id="level">
+              <option selected>Beginner</option><option>Gentle</option><option>Intermediate</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Language</span>
+            <select id="language">
+              <option>English</option><option>Hindi</option><option>Telugu</option><option>Tamil</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="gentle-note"><span>✧</span><p><strong>Keep it comfortable.</strong> Move gently and stop if you feel pain, dizziness, or discomfort. This is general wellness guidance, not medical advice.</p></div>
+        <button id="generateBtn" class="primary-button" type="submit"><span>Generate my session</span><b>↗</b></button>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section id="result" class="result-section hidden">
+      <div class="result-heading"><div><p class="eyebrow">MADE FOR THIS MOMENT</p><h2 id="resultTitle">Your guided session</h2></div><span class="result-sparkle">✦</span></div>
+      <div class="result-card">
+        <div class="audio-top"><div class="audio-icon">♫</div><div><strong>Listen and settle in</strong><p>Your session is ready. Find a comfortable place before you begin.</p></div></div>
+        <audio id="audioPlayer" controls></audio>
+        <div class="transcript-header"><h3>Session transcript</h3><button id="transcriptToggle" type="button" aria-expanded="true">Hide transcript −</button></div>
+        <p id="transcript" class="transcript"></p>
+        <button id="createAnother" class="secondary-button" type="button">Create another session ↗</button>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="how-section">
+      <p class="eyebrow">SIMPLE BY DESIGN</p><h2>From intention to calm.</h2>
+      <div class="how-grid">
+        <article><span>01</span><h3>Choose your moment</h3><p>Select a practice, focus, duration, and language that suits you.</p></article>
+        <article><span>02</span><h3>Personalize with AI</h3><p>Gemini creates a fresh spoken script based on your choices.</p></article>
+        <article><span>03</span><h3>Listen with Murf AI</h3><p>Murf turns your script into audio you can play in your browser.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>SereneMind</span><span>Make room for a softer moment.</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
